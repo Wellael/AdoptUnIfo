@@ -12,8 +12,26 @@
         android:layout_height="wrap_content"
         android:text="@string/bienvenue"
         android:id="@+id/bienvenue"
+        android:textAppearance="@style/Bienvenue"
+        android:layout_marginTop="64dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/Bienvenue"/>
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connexion"
+        android:id="@+id/connexion"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/inscription"
+        android:id="@+id/inscription"
+        android:layout_below="@+id/connexion"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

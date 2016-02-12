@@ -4,4 +4,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="bienvenue">Bienvenue Sur AdoptUnInfo.com</string>
+    <string name="connexion">Se connecter</string>
+    <string name="inscription">S'inscrire</string>
 </resources>
