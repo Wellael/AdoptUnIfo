@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Master" id="1" x="200" y="10" measuredWidth="406" measuredHeight="794">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Devices.screen#Phone"/>
+    <overrides>
+      <widgets ref="48">
+        <attributes key="icon" value="assets/hort (small)"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="5" x="223" y="101" measuredWidth="319" measuredHeight="36">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Condition Générales d'Utilisation">
+        <font size="20px"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="6" x="233" y="136" height="516" measuredWidth="325" measuredHeight="516">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Paragraph"/>
+    <overrides>
+      <widgets ref="13" width="325" height="516" text="Préambule&#xA;&#xA;Les présentes conditions générales d’utilisation (&quot;CGU&quot;) &#xA;régissent les conditions d’utilisation de l’application mobile &#xA;« AdopteUnInfo.com » &#xA;(l’«Application Mobile » ) détenus par la société Panda &amp; Co. &#xA;SAS (« Panda») par tout utilisateur de l’Application Mobile &#xA;(l’ «Utilisateur») en vue de l’achat par Panda de produits tels&#xA; que photographies, videos, commentaires, etc, (ensemble les «Produits») réalisées par l’Utilisateur ayant accepté une offre d’achat conditionnée figurant sur l’Application Mobile &#xA; (l’ « Offre »).&#xA;&#xA;Les CGU sont mises à la disposition des Utilisateurs sur le site internet et l’Application Mobile où elles sont directement consultables et peuvent également leur être communiquées sur demande.&#xA;&#xA;L’Utilisateur déclare avoir pris connaissance et accepté les présentes CGU avant d’accepter toute Offre. Les CGU applicables sont celles en vigueur sur l’Application Mobile.&#xA;&#xA;Le fait que Panda ne se prévale pas à un moment donné de l'une des quelconques dispositions des CGU ne peut être interprété comme valant renonciation à se prévaloir ultérieurement de l'une des quelconques desdites conditions.&#xA;&#xA;Article 1. - Conditions d’inscription et compte Utilisateur&#xA;&#xA;Pour pouvoir utiliser l’Application Mobile et profiter des Offres, l’Utilisateur devra s’inscrire et créer un compte Utilisateur.&#xA;&#xA;Lors de l’ouverture du compte, l’Utilisateur devra communiquer des informations personnelles relatives à son identité telles que nom, prénom, adresse email, numéro de téléphone, date de naissance, sexe, orientation sexuelle et son adresse. A défaut, l’ouverture du compte Utilisateur ne sera pas possible. L’utilisation des données à caractère personnel des Utilisateurs est régie par l’article 8 des CGU.&#xA;&#xA;L’Utilisateur devra déclarer bénéficier d’une couverture de réseau téléphonique et internet sur le réseau de l'Offre.&#xA;&#xA;L’Application Mobile est exclusivement réservée aux Utilisateurs qui doivent impérativement être des personnes physiques majeures de plus de 18 ans.&#xA;&#xA;Tout Utilisateur ne remplissant pas les conditions prévues dans les CGU se verra interdire l’accès et l’utilisation de l’Application Mobile. Panda se reserve le droit de suspendre temporairement ou définitivement le compte de tout Utilisateur.&#xA;&#xA;L’Utilisateur reconnait et accepte de garder confidentiel le login et le mot de passe permettant un accès à son compte. Le login et le mot de passe sont personnels et ne doivent pas être partagés ni transférés à une quelconque personne physique ou morale, sous quelque forme que ce soit, sans le consentement écrit et préalable de Panda.&#xA;&#xA;L’Utilisateur est seul responsable de son compte et de l’utilisation qu’il en fait. ">
+        <font size="9px"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="7" x="537" y="631" measuredWidth="36" measuredHeight="30">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
+    <overrides>
+      <widgets ref="24" text="X">
+        <attributes key="shapeType" value="rectangle-round"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
