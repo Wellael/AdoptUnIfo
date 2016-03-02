@@ -3,4 +3,54 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Connexion"
+        android:id="@+id/lblCo"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50dp" />
+
+    <EditText
+        android:layout_marginTop="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tel"
+        android:phoneNumber="true"
+        android:hint="Numéro de téléphone (XXXXXXXXXX)" />
+    <EditText
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/mdp"
+        android:hint="Mot de passe"
+        android:phoneNumber="true" />
+
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Connexion"
+            android:id="@+id/connexion"/>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="retour"
+            android:id="@+id/retour"/>
+
+
+
+
+    </LinearLayout>
+
 </LinearLayout>

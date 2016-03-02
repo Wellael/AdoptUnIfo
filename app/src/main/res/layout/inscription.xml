@@ -16,7 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp">
 
 
         <TextView
@@ -26,7 +27,7 @@
             android:text="Nom :"
             android:id="@+id/lblNom" />
         <EditText
-            android:layout_marginLeft="120dp"
+            android:layout_marginLeft="110dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/nom" />
@@ -37,6 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp">
 
 
@@ -47,7 +49,7 @@
             android:text="Prenom :"
             android:id="@+id/lblPrenom" />
         <EditText
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="90dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/prenom" />
@@ -58,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp">
 
 
@@ -68,7 +71,7 @@
             android:text="Date de naissance :"
             android:id="@+id/lblDateNais" />
         <EditText
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="25dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/dateNais" />
@@ -80,6 +83,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp">
 
 
@@ -101,7 +105,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="120dp"
+                    android:layout_marginLeft="110dp"
                     android:text="Femme"
                     android:checked="false"
                     android:id="@+id/femme" />
@@ -115,7 +119,13 @@
                     android:id="@+id/homme" />
 
             </LinearLayout>
-
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="110dp"
+                android:text="Licorne"
+                android:checked="false"
+                android:id="@+id/licorne" />
 
         </RadioGroup>
 
@@ -126,7 +136,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp">
 
 
         <TextView
@@ -136,11 +147,109 @@
             android:text="Telephone :"
             android:id="@+id/lblTel" />
         <EditText
-            android:layout_marginLeft="85dp"
+            android:layout_marginLeft="75dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:id="@+id/tel"
             android:phoneNumber="true" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe :"
+            android:id="@+id/lblMdp" />
+        <EditText
+            android:layout_marginLeft="56dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mdp"
+            android:password="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intéressé par :"
+            android:id="@+id/lblOrient" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:text="Femme"
+                android:checked="false"
+                android:id="@+id/femmeO" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="Homme"
+                android:checked="false"
+                android:id="@+id/hommeO" />
+
+        </LinearLayout>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:text="Les deux"
+                android:checked="false"
+                android:id="@+id/lesDeuxO" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Inscription"
+            android:id="@+id/inscription"/>
+        <Button
+            android:layout_marginLeft="10dp"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="retour"
+            android:id="@+id/retour"/>
+
+
+
 
     </LinearLayout>
 
