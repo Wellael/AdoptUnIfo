@@ -24,7 +24,7 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="8" x="233" y="240" width="92" measuredWidth="92" measuredHeight="30">
+  <widgets xsi:type="model:Master" id="8" x="233" y="240" width="92" measuredWidth="92" measuredHeight="30" link="SignUp.screen">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" width="92" text="Inscription">
@@ -32,7 +32,7 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="9" x="233" y="302" width="92" measuredWidth="92" measuredHeight="30">
+  <widgets xsi:type="model:Master" id="9" x="233" y="302" width="92" measuredWidth="92" measuredHeight="30" link="SignIn.screen">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" width="92" text="Connexion">
@@ -40,7 +40,7 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="11" x="429" y="637" measuredWidth="46" measuredHeight="30">
+  <widgets xsi:type="model:Master" id="11" x="429" y="637" measuredWidth="46" measuredHeight="30" link="EULA.screen">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="CGU">
@@ -48,7 +48,7 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="12" x="490" y="637" measuredWidth="77" measuredHeight="30">
+  <widgets xsi:type="model:Master" id="12" x="490" y="637" measuredWidth="77" measuredHeight="30" link="About.screen">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="A Propos">

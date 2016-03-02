@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
-  <widgets xsi:type="model:Master" id="1" x="200" y="10" measuredWidth="406" measuredHeight="794">
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="200" measuredWidth="406" measuredHeight="794">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Devices.screen#Phone"/>
     <overrides>
       <widgets ref="48">
@@ -8,27 +8,27 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="2" x="233" y="107" measuredWidth="146" measuredHeight="46">
-    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Header"/>
-    <overrides>
-      <widgets ref="15" text="Inscription">
-        <font size="28px"/>
-      </widgets>
-    </overrides>
-  </widgets>
-  <widgets xsi:type="model:Master" id="3" x="365" y="155" measuredWidth="190" measuredHeight="43">
+  <widgets xsi:type="model:Master" id="10" x="365" y="164" width="190" measuredWidth="190" measuredHeight="43">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Spinner"/>
     <overrides>
       <widgets ref="6" width="190" text="Dupont"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="4" x="365" y="197" measuredWidth="190" measuredHeight="43">
+  <widgets xsi:type="model:Master" id="12" x="233" y="110" measuredWidth="260" measuredHeight="40">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Modification du profil">
+        <font size="24px"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="13" x="365" y="206" width="190" measuredWidth="190" measuredHeight="43">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Spinner"/>
     <overrides>
       <widgets ref="6" width="190" text="François"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="5" x="461" y="290" measuredWidth="49" measuredHeight="30" link="SignUp_date.screen">
+  <widgets xsi:type="model:Master" id="17" x="461" y="299" measuredWidth="49" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Date">
@@ -36,31 +36,31 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="6" x="365" y="324" measuredWidth="145" measuredHeight="43">
+  <widgets xsi:type="model:Master" id="18" x="365" y="333" width="145" measuredWidth="145" measuredHeight="43">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Spinner"/>
     <overrides>
       <widgets ref="6" width="145" text="06 45 00 00 00"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="7" x="362" y="366" measuredWidth="193" measuredHeight="43">
+  <widgets xsi:type="model:Master" id="19" x="362" y="375" width="193" measuredWidth="193" measuredHeight="43">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Spinner"/>
     <overrides>
       <widgets ref="6" width="193" text="19 Rue du chiot"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="8" x="362" y="408" measuredWidth="193" measuredHeight="43">
+  <widgets xsi:type="model:Master" id="20" x="362" y="417" measuredWidth="193" measuredHeight="43">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Spinner"/>
     <overrides>
       <widgets ref="6" width="193" text="Annecy"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="9" x="362" y="450" measuredWidth="193" measuredHeight="43">
+  <widgets xsi:type="model:Master" id="21" x="362" y="459" measuredWidth="193" measuredHeight="43">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Spinner"/>
     <overrides>
       <widgets ref="6" width="193" text="74200"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="10" x="491" y="619" measuredWidth="64" measuredHeight="30" link="ModifProfile.screen">
+  <widgets xsi:type="model:Master" id="22" x="479" y="618" measuredWidth="64" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Valider">
@@ -68,10 +68,10 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="11" x="365" y="258" measuredWidth="21" measuredHeight="19">
+  <widgets xsi:type="model:Master" id="25" x="365" y="267" measuredWidth="21" measuredHeight="19">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Radio%20Button"/>
   </widgets>
-  <widgets xsi:type="model:Master" id="12" x="441" y="258" measuredWidth="21" measuredHeight="19">
+  <widgets xsi:type="model:Master" id="26" x="441" y="267" measuredWidth="21" measuredHeight="19">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Radio%20Button"/>
     <overrides>
       <widgets ref="2">
@@ -79,79 +79,99 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="13" x="385" y="256" measuredWidth="50" measuredHeight="23">
+  <widgets xsi:type="model:Master" id="27" x="385" y="265" measuredWidth="50" measuredHeight="23">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Micro"/>
     <overrides>
       <widgets ref="8" text="Homme"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="14" x="461" y="257" measuredWidth="46" measuredHeight="23">
+  <widgets xsi:type="model:Master" id="28" x="461" y="266" measuredWidth="46" measuredHeight="23">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Micro"/>
     <overrides>
       <widgets ref="8" text="Femme"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="17" x="243" y="165" measuredWidth="47" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="29" x="506" y="267" measuredWidth="21" measuredHeight="19">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Radio%20Button"/>
+    <overrides>
+      <widgets ref="2">
+        <attributes key="selected" value="false"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="30" x="526" y="266" measuredWidth="45" measuredHeight="23">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Micro"/>
+    <overrides>
+      <widgets ref="8" text="Licorne"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="35" x="243" y="174" measuredWidth="47" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Nom"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="18" x="243" y="207" measuredWidth="72" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="36" x="243" y="216" measuredWidth="72" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Prenom"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="19" x="243" y="251" measuredWidth="45" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="37" x="243" y="260" measuredWidth="45" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Sexe"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="20" x="243" y="288" measuredWidth="177" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="38" x="243" y="297" measuredWidth="177" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Date de naissacance"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="21" x="243" y="329" measuredWidth="95" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="39" x="243" y="338" measuredWidth="95" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Téléphone"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="22" x="243" y="371" measuredWidth="72" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="40" x="243" y="380" measuredWidth="72" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Adresse"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="23" x="243" y="413" measuredWidth="43" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="41" x="243" y="422" measuredWidth="43" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Ville"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="24" x="243" y="460" measuredWidth="106" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="42" x="243" y="469" measuredWidth="106" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Code Postal"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="25" x="243" y="502" measuredWidth="116" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="43" x="243" y="511" measuredWidth="116" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Departement"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="26" x="243" y="544" measuredWidth="129" measuredHeight="33">
+  <widgets xsi:type="model:Master" id="44" x="243" y="553" measuredWidth="129" measuredHeight="33">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Medium"/>
     <overrides>
       <widgets ref="4" text="Année en cour"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="27" x="441" y="504" measuredWidth="105" measuredHeight="30" link="SignUp_dpt.screen">
+  <widgets xsi:type="model:Master" id="45" x="572" y="91" height="570" measuredWidth="8" measuredHeight="570">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Scrollbar"/>
+    <overrides>
+      <widgets ref="20" height="570"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="48" x="441" y="513" measuredWidth="105" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Département">
@@ -159,7 +179,7 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="28" x="467" y="546" measuredWidth="59" measuredHeight="30" link="SignUp_yr.screen">
+  <widgets xsi:type="model:Master" id="49" x="467" y="555" measuredWidth="59" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Année">
@@ -167,18 +187,22 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="29" x="572" y="103" measuredWidth="8" measuredHeight="570">
-    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Scrollbar"/>
+  <widgets xsi:type="model:Master" id="50" x="233" y="223" measuredWidth="330" measuredHeight="305">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Prompts.screen#Date%20Picker"/>
     <overrides>
-      <widgets ref="20" height="570"/>
-    </overrides>
-  </widgets>
-  <widgets xsi:type="model:Master" id="30" x="233" y="619" measuredWidth="68" measuredHeight="30" link="FrstPage.screen">
-    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
-    <overrides>
-      <widgets ref="24" text="Annuler">
-        <attributes key="shapeType" value="rectangle-rounded"/>
+      <widgets ref="54" text="%(font:22)Année en cours%&#xA;&#xA;Annuler, Valider">
+        <items ref="@items.0" text="Annuler" link="ModifProfile.screen"/>
+        <items ref="@items.1" text="Valider" link="ModifProfile.screen"/>
       </widgets>
+      <widgets ref="55" x="133"/>
+      <widgets ref="63" x="0"/>
+      <widgets ref="55">
+        <widgetChanges xsi:type="o:Delete" ref="69"/>
+        <widgetChanges xsi:type="o:Delete" ref="56"/>
+      </widgets>
+      <widgets ref="64" text="1"/>
+      <widgets ref="65" text="2"/>
+      <widgets ref="66" text="3"/>
     </overrides>
   </widgets>
   <hRuler/>

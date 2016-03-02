@@ -30,7 +30,7 @@
   </widgets>
   <widgets xsi:type="model:Image" id="8" x="200" y="449" measuredWidth="400" measuredHeight="300" src="assets/panda_tsp.png"/>
   <widgets xsi:type="model:Image" id="9" x="468" y="133" width="98" height="72" measuredWidth="98" measuredHeight="72" src="assets/hort.png"/>
-  <widgets xsi:type="model:Master" id="10" x="530" y="629" measuredWidth="36" measuredHeight="30">
+  <widgets xsi:type="model:Master" id="10" x="530" y="629" measuredWidth="36" measuredHeight="30" link="FrstPage.screen">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="X">

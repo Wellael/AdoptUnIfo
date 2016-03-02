@@ -28,7 +28,7 @@
       <widgets ref="6" width="190" text="François"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="5" x="461" y="290" measuredWidth="49" measuredHeight="30" link="SignUp_date.screen">
+  <widgets xsi:type="model:Master" id="5" x="461" y="290" measuredWidth="49" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Date">
@@ -60,7 +60,7 @@
       <widgets ref="6" width="193" text="74200"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="10" x="491" y="619" measuredWidth="64" measuredHeight="30" link="ModifProfile.screen">
+  <widgets xsi:type="model:Master" id="10" x="491" y="619" measuredWidth="64" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Valider">
@@ -89,6 +89,20 @@
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Micro"/>
     <overrides>
       <widgets ref="8" text="Femme"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="15" x="506" y="258" measuredWidth="21" measuredHeight="19">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Radio%20Button"/>
+    <overrides>
+      <widgets ref="2">
+        <attributes key="selected" value="false"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="16" x="526" y="257" measuredWidth="45" measuredHeight="23">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Typography.screen#Text%20Micro"/>
+    <overrides>
+      <widgets ref="8" text="Licorne"/>
     </overrides>
   </widgets>
   <widgets xsi:type="model:Master" id="17" x="243" y="165" measuredWidth="47" measuredHeight="33">
@@ -151,7 +165,7 @@
       <widgets ref="4" text="Année en cour"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="27" x="441" y="504" measuredWidth="105" measuredHeight="30" link="SignUp_dpt.screen">
+  <widgets xsi:type="model:Master" id="27" x="441" y="504" measuredWidth="105" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Département">
@@ -159,7 +173,7 @@
       </widgets>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="28" x="467" y="546" measuredWidth="59" measuredHeight="30" link="SignUp_yr.screen">
+  <widgets xsi:type="model:Master" id="28" x="467" y="546" measuredWidth="59" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Année">
@@ -173,11 +187,20 @@
       <widgets ref="20" height="570"/>
     </overrides>
   </widgets>
-  <widgets xsi:type="model:Master" id="30" x="233" y="619" measuredWidth="68" measuredHeight="30" link="FrstPage.screen">
+  <widgets xsi:type="model:Master" id="30" x="233" y="619" measuredWidth="68" measuredHeight="30">
     <screen xsi:type="model:WidgetGroup" href="assets/Android44/Controls.screen#Button"/>
     <overrides>
       <widgets ref="24" text="Annuler">
         <attributes key="shapeType" value="rectangle-rounded"/>
+      </widgets>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="32" x="233" y="234" measuredWidth="330" measuredHeight="305">
+    <screen xsi:type="model:WidgetGroup" href="assets/Android44/Prompts.screen#Date%20Picker"/>
+    <overrides>
+      <widgets ref="54" text="%(font:22)Date de naissance%&#xA;&#xA;Annuler, Valider">
+        <items ref="@items.0" text="Annuler" link="SignUp.screen"/>
+        <items ref="@items.1" text="Valider" link="SignUp.screen"/>
       </widgets>
     </overrides>
   </widgets>
