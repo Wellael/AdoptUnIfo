@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Inscription"
+        android:id="@+id/lblIns"
+        android:layout_gravity="center_horizontal"
+        android:textSize="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom :"
+            android:id="@+id/lblNom" />
+        <EditText
+            android:layout_marginLeft="120dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prenom :"
+            android:id="@+id/lblPrenom" />
+        <EditText
+            android:layout_marginLeft="100dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/prenom" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de naissance :"
+            android:id="@+id/lblDateNais" />
+        <EditText
+            android:layout_marginLeft="35dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateNais" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sexe :"
+            android:id="@+id/lblSexe" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:text="Femme"
+                    android:checked="false"
+                    android:id="@+id/femme" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Homme"
+                    android:checked="false"
+                    android:id="@+id/homme" />
+
+            </LinearLayout>
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telephone :"
+            android:id="@+id/lblTel" />
+        <EditText
+            android:layout_marginLeft="85dp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tel"
+            android:phoneNumber="true" />
+
+    </LinearLayout>
+
+</LinearLayout>
