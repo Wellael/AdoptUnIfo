@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">AdoptUn Info.com</string>
+    <string name="app_name">Adopt Un Info.com</string>
     <!-- Misc -->
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
     <!-- global -->
     <string name="connexion">Connexion</string>
+    <string name="valid">Valider</string>
     <string name="inscription">Inscription</string>
     <string name="retour">Retour</string>
 
@@ -13,7 +14,28 @@
     <string name="bienvenue">Bienvenue Sur AdoptUnInfo.com</string>
 
     <!-- Inscription / Modification -->
-    <string name="nom">Nom : </string>
+    <string name="nom">Nom :</string>
+    <string name="prenom">Prénom :</string>
+    <string name="dateNaiss">Date de naissance :</string>
+    <string name="sexe">Sexe :</string>
+    <string name="tel">Téléphone :</string>
+    <string name="pass">Mot de passe :</string>
+    <string name="inter">Intéressé par :</string>
+    <string name="dept">Departement :</string>
+    <string name="annee">Annee en cours :</string>
+    <string name="descr">Description :</string>
+
+    <string name="modif">Modification</string>
+    <string name="profil">Profil</string>
+
+
+    <!-- genres -->
+    <string name="homme">Homme</string>
+    <string name="femme">Femme</string>
+    <string name="both">Les deux</string>
+
+    <!-- profil -->
+    <string name="mon">Mon</string>
 
 
 </resources>
