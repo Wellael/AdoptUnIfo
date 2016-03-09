@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Inscription"
+        android:text="@string/inscription"
         android:id="@+id/lblIns"
         android:layout_gravity="center_horizontal"
         android:textSize="50dp" />
@@ -28,7 +28,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nom :"
+            android:text="@string/nom"
             android:id="@+id/lblNom" />
         <EditText
             android:layout_marginLeft="110dp"

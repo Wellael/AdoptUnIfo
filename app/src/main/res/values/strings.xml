@@ -1,9 +1,19 @@
 <resources>
     <string name="app_name">AdoptUn Info.com</string>
-
+    <!-- Misc -->
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="bienvenue">Bienvenue Sur AdoptUnInfo.com</string>
+
+    <!-- global -->
     <string name="connexion">Connexion</string>
     <string name="inscription">Inscription</string>
+    <string name="retour">Retour</string>
+
+    <!-- main -->
+    <string name="bienvenue">Bienvenue Sur AdoptUnInfo.com</string>
+
+    <!-- Inscription / Modification -->
+    <string name="nom">Nom : </string>
+
+
 </resources>

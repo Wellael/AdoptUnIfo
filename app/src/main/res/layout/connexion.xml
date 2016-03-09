@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Connexion"
+        android:text="@string/connexion"
         android:id="@+id/lblCo"
         android:layout_gravity="center_horizontal"
         android:textSize="50dp" />
@@ -39,17 +39,14 @@
         <Button
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="Connexion"
+            android:text="@string/connexion"
             android:id="@+id/connexion"/>
         <Button
             android:layout_marginLeft="10dp"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:text="retour"
+            android:text="@string/retour"
             android:id="@+id/retour"/>
-
-
-
 
     </LinearLayout>
 
