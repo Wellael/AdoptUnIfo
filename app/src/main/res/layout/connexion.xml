@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/mdp"
         android:hint="Mot de passe"
-        android:phoneNumber="true" />
+        android:password="true" />
 
     <LinearLayout
         android:layout_marginTop="70dp"
