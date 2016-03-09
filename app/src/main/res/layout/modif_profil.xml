@@ -11,10 +11,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Inscription"
-        android:id="@+id/lblIns"
+        android:text="Modification"
+        android:id="@+id/lblModif"
         android:layout_gravity="center_horizontal"
-        android:textSize="50dp" />
+        android:textSize="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Profil"
+        android:id="@+id/lblprofil"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -220,6 +228,48 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Departement :"
+            android:id="@+id/lblDep" />
+
+        <ExpandableListView
+            android:layout_marginLeft="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listDep"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Annee en cours :"
+            android:id="@+id/lblAnne" />
+
+        <ExpandableListView
+            android:layout_marginLeft="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listAnne"
+            android:layout_gravity="right" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
@@ -238,10 +288,8 @@
             android:text="retour"
             android:id="@+id/retour"/>
 
-
-
-
     </LinearLayout>
+
 
 </LinearLayout>
 </ScrollView>

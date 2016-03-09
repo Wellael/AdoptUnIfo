@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Inscription extends Activity{
+
+    private boolean erreur = false;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,11 +26,14 @@ public class Inscription extends Activity{
         final EditText tel=(EditText) findViewById(R.id.tel);
         final EditText mdp=(EditText) findViewById(R.id.mdp);
 
-        Button homme=(Button) findViewById(R.id.homme);
-        Button femme=(Button) findViewById(R.id.femme);
-        Button hommeO=(Button) findViewById(R.id.hommeO);
-        Button femmeO=(Button) findViewById(R.id.femmeO);
-        Button deuxO=(Button) findViewById(R.id.deuxO);
+        final RadioGroup grpSex=(RadioGroup) findViewById(R.id.grpSex);
+        final RadioGroup grpInter=(RadioGroup) findViewById(R.id.grpInter);
+
+        final Button homme=(Button) findViewById(R.id.homme);
+        final Button femme=(Button) findViewById(R.id.femme);
+        final Button hommeO=(Button) findViewById(R.id.hommeO);
+        final Button femmeO=(Button) findViewById(R.id.femmeO);
+        final Button deuxO=(Button) findViewById(R.id.deuxO);
 
         Button valider=(Button) findViewById(R.id.valider);
         Button retour=(Button) findViewById(R.id.retour);
@@ -42,11 +49,40 @@ public class Inscription extends Activity{
         valider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(isTelValid(String.valueOf(tel.getText()))==false){
-                    tel.setError("Le telephone n'est pas au bon format");
+                erreur=false;
+                if(String.valueOf(nom.getText()).length()==0){
+                    nom.setError("Veuillez entrer un nom");
+                    erreur =true;
+                }
+                if(String.valueOf(prenom.getText()).length()==0){
+                    prenom.setError("Veuillez entrer un prenom");
+                    erreur =true;
                 }
                 if(isDateValid(String.valueOf(dateNais.getText()))==false){
+                    dateNais.setError("La date n'est pas au bon format");
+                    erreur =true;
+                }
+                if(homme==null && femme==null) {
+                    homme.setError("Vous devez au moin choisir un sexe");
+                    erreur =true;
+                }
+                if(isTelValid(String.valueOf(tel.getText()))==false){
                     tel.setError("Le telephone n'est pas au bon format");
+                    erreur =true;
+                }
+                if(String.valueOf(mdp.getText()).length()==0){
+                    mdp.setError("Veuillez entrer un mot de passe");
+                    erreur =true;
+                }
+                if(hommeO==null && femmeO==null && deuxO==null){
+                    deuxO.setError("Vous devez au moin choisir un interet");
+                    erreur =true;
+                }
+                if(!erreur){
+                    Intent goToResult = new Intent(getApplicationContext(), ModifProfil.class);
+                    startActivity(goToResult);
+
+
                 }
             }
         });
