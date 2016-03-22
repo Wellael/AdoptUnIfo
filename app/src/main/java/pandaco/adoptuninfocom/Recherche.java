@@ -29,7 +29,7 @@ public class Recherche extends Activity {
                 int n = rand.nextInt(nbPers);
 
                 Reader reader = Reader.getInstance();
-                
+
 
                 Session.setIdPersonne(n);
 
