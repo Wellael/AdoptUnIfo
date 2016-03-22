@@ -27,6 +27,8 @@ public class ProfilAutre extends Activity {
         Button avoirNum = (Button) findViewById(R.id.avoirNum);
         Button retour = (Button) findViewById(R.id.retour);
 
+        nom.setText(String.valueOf(Session.getIdPersonne()));
+
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

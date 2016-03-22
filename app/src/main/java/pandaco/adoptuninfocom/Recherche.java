@@ -18,15 +18,21 @@ public class Recherche extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recherche);
 
+        final int nbPers = 50;
+
         ImageButton recherche = (ImageButton) findViewById(R.id.recherche);
 
         recherche.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Random rand = new Random();
-                int n = rand.nextInt(50);
+                int n = rand.nextInt(nbPers);
 
                 Toast.makeText(getApplicationContext(),String.valueOf(n),Toast.LENGTH_SHORT).show();
+                Session.setIdPersonne(n);
+
+                Intent goToResult = new Intent(getApplicationContext(), ProfilAutre.class);
+                startActivity(goToResult);
             }
         });
     }
