@@ -16,6 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -26,6 +27,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -34,7 +37,15 @@ public class Connexion extends Activity{
 
     private static final String FLAG_SUCCESS = "success";
     private static final String FLAG_MESSAGE = "message";
+    private static final String FLAG_ID_ETUDIANT = "id_etudiant";
+    private static final String FLAG_NOM_ETUDIANT = "nom_etudiant";
+    private static final String FLAG_PRENOM_ETUDIANT = "prenom_etudiant";
+    private static final String FLAG_SEXE_ETUDIANT = "sexe_etudiant";
+    private static final String FLAG_CP_ETUDIANT = "cp";
+    private static final String FLAG_VILLE_ETUDIANT = "ville";
+    private static final String FLAG_DATENAISS_ETUDIANT = "datenaiss";
     private static final String LOGIN_URL = "http://prj001.vldi.fr/"; // ajustez selon votre adresse de serveur
+    private static Boolean JeSuisLog = false;
 
 
 
@@ -68,8 +79,12 @@ public class Connexion extends Activity{
                     //On appel l'AsyncTask
                     webService.execute(etudiant);//Appel de l'asyntask
 
-                    Intent goToResult = new Intent(getApplicationContext(), MonProfil.class);
-                    startActivity(goToResult);
+                    if(!JeSuisLog==true){
+                        Intent goToResult = new Intent(getApplicationContext(), MonProfil.class);
+
+                        startActivity(goToResult);
+                    }
+
                 }
             }
         });
@@ -149,6 +164,23 @@ public class Connexion extends Activity{
                 if (loginOK != 0) {
                     Toast.makeText(getApplicationContext(), "Connecte",
                             Toast.LENGTH_SHORT).show();
+                    JeSuisLog=true;
+                    JSONObject demiJson = responseJson.getJSONObject("data");
+
+                    int idEtudiant = demiJson.getInt(FLAG_ID_ETUDIANT);
+                    String nomEtudiant = demiJson.getString(FLAG_NOM_ETUDIANT);
+                    String prenomEtudiant = demiJson.getString(FLAG_PRENOM_ETUDIANT);
+                    String sexeEtudiant = demiJson.getString(FLAG_SEXE_ETUDIANT);
+                    String cpEtudiant = demiJson.getString(FLAG_CP_ETUDIANT);
+                    String villeEtudiant = demiJson.getString(FLAG_VILLE_ETUDIANT);
+                    String datenaissEtudiant = demiJson.getString(FLAG_DATENAISS_ETUDIANT);
+                    List<String> infos = new ArrayList<String>();
+                    infos.add(nomEtudiant);
+                    infos.add(prenomEtudiant);
+                    infos.add(sexeEtudiant);
+                    infos.add(cpEtudiant);
+                    infos.add(villeEtudiant);
+                    infos.add(datenaissEtudiant);
                 } else {
                     Toast.makeText(getApplicationContext(), "Try again.",
                             Toast.LENGTH_SHORT).show();

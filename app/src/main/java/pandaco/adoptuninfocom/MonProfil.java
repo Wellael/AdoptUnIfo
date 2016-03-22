@@ -29,6 +29,9 @@ public class MonProfil extends Activity {
         final TextView depart=(TextView) findViewById(R.id.depart);
         final TextView anne=(TextView) findViewById(R.id.anne);
 
+
+
+
         Button recherche = (Button) findViewById(R.id.recherche);
         Button modif = (Button) findViewById(R.id.modif);
 
@@ -48,4 +51,6 @@ public class MonProfil extends Activity {
         });
 
     }
+
+
 }
