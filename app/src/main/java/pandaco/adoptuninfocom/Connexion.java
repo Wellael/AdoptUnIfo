@@ -181,6 +181,7 @@ public class Connexion extends Activity{
                     infos.add(cpEtudiant);
                     infos.add(villeEtudiant);
                     infos.add(datenaissEtudiant);
+                    //Session.setInfos(infos);
                 } else {
                     Toast.makeText(getApplicationContext(), "Try again.",
                             Toast.LENGTH_SHORT).show();

@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by lerouxca on 09/03/2016.
  */
@@ -29,6 +32,10 @@ public class MonProfil extends Activity {
         final TextView depart=(TextView) findViewById(R.id.depart);
         final TextView anne=(TextView) findViewById(R.id.anne);
 
+        List<String> infos = new ArrayList<String>();
+        infos=Session.getInfos();
+
+        nom.setText(String.valueOf(infos.get(0)));
 
 
 
