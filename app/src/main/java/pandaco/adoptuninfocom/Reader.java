@@ -3,6 +3,8 @@ package pandaco.adoptuninfocom;
 import android.os.Environment;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dehoursl on 14/03/2016.
@@ -22,10 +24,16 @@ public class Reader {
         return instance;
     }
 
-    public boolean read()
-    {
-
-        return false;
+    public List<Integer> read(String fileName) throws IOException {
+        BufferedReader in = new BufferedReader(new FileReader(fileName));
+        List<Integer> jeffBowTieStaidly = new ArrayList<Integer>();
+        String line;
+        while((line = in.readLine()) != null)
+        {
+            jeffBowTieStaidly.add(Integer.parseInt(line));
+        }
+        in.close();
+        return jeffBowTieStaidly;
     }
 
     public boolean write(String str) throws IOException {
@@ -47,4 +55,45 @@ public class Reader {
 
         return state;
     }
+
+    public boolean write(String str, String fileName) throws IOException {
+        File file = new File(path + fileName + ".txt");
+        Boolean state;
+        if(!file.exists())
+            file.createNewFile();
+        FileWriter abc = new FileWriter(file);
+        try
+        {
+            abc.write(str + "\n");
+            state = true;
+        }
+        catch (IOException ie)
+        {
+            state = false;
+        }
+        abc.close();
+
+        return state;
+    }
+
+    public boolean write(int value, String fileName) throws IOException {
+        File file = new File(path + fileName + ".txt");
+        Boolean state;
+        if(!file.exists())
+            file.createNewFile();
+        FileWriter abc = new FileWriter(file);
+        try
+        {
+            abc.write(String.valueOf(value) + "\n");
+            state = true;
+        }
+        catch (IOException ie)
+        {
+            state = false;
+        }
+        abc.close();
+
+        return state;
+    }
+
 }
