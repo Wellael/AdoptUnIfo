@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -24,6 +25,8 @@ public class Recherche extends Activity {
             public void onClick(View v) {
                 Random rand = new Random();
                 int n = rand.nextInt(50);
+
+                Toast.makeText(getApplicationContext(),n,Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -46,5 +46,12 @@ public class ModifProfil extends Activity{
                 startActivity(goToResult);
             }
         });
+        valider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goToResult = new Intent(getApplicationContext(), MonProfil.class);
+                startActivity(goToResult);
+            }
+        });
     }
 }
