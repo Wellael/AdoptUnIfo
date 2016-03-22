@@ -28,7 +28,9 @@ public class Recherche extends Activity {
                 Random rand = new Random();
                 int n = rand.nextInt(nbPers);
 
-                Toast.makeText(getApplicationContext(),String.valueOf(n),Toast.LENGTH_SHORT).show();
+                Reader reader = Reader.getInstance();
+                reader.write(n);
+
                 Session.setIdPersonne(n);
 
                 Intent goToResult = new Intent(getApplicationContext(), ProfilAutre.class);
