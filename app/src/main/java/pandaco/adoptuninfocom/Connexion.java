@@ -67,6 +67,9 @@ public class Connexion extends Activity{
                     WebService webService = new WebService();
                     //On appel l'AsyncTask
                     webService.execute(etudiant);//Appel de l'asyntask
+
+                    Intent goToResult = new Intent(getApplicationContext(), MonProfil.class);
+                    startActivity(goToResult);
                 }
             }
         });
