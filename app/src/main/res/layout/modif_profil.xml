@@ -213,6 +213,42 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Code Postal :"
+                android:id="@+id/lblCp" />
+            <EditText
+                android:layout_marginLeft="66dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/cp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ville :"
+                android:id="@+id/lblVille" />
+            <EditText
+                android:layout_marginLeft="115dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ville" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -231,4 +267,5 @@
                 android:id="@+id/retour"/>
         </LinearLayout>
     </LinearLayout>
+
 </ScrollView>
