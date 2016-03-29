@@ -92,12 +92,12 @@ public class ModifProfil extends Activity{
                 }
 
                 Etudiant etudiant = new Etudiant();
-                etudiant.setTel_etudiant(nom.getText().toString());
-                etudiant.setMdp_etudiant(prenom.getText().toString());
+                etudiant.setNom_etudiant(nom.getText().toString());
+                etudiant.setPrenom_etudiant(prenom.getText().toString());
                 etudiant.setTel_etudiant(tel.getText().toString());
                 etudiant.setMdp_etudiant(mdp.getText().toString());
-                etudiant.setTel_etudiant(dateNais.getText().toString());
-                etudiant.setMdp_etudiant(description.getText().toString());
+                etudiant.setDatenaiss(dateNais.getText().toString());
+                etudiant.setDescription_etudiant(description.getText().toString());
                 etudiant.setSexe_etudiant(sexe);
 
                 WebService webService = new WebService();
@@ -117,7 +117,6 @@ public class ModifProfil extends Activity{
         //Actions a effectuer avant toutes operations
         @Override
         protected void onPreExecute() {
-            Log.i("preexecute", "la c'est bon");
             super.onPreExecute();
         }
 
@@ -129,10 +128,8 @@ public class ModifProfil extends Activity{
             JSONObject jsonObject = new JSONObject();
 
             try {
-                Log.i("jsais pas", connect(params[0]).toString());
                 return connect(params[0]);//params[0] est l etudiant
             } catch (IOException e) {
-                Log.i("jsais pas2", jsonObject.toString());
                 return jsonObject;
             }
 
@@ -190,9 +187,8 @@ public class ModifProfil extends Activity{
             conn.setRequestMethod("POST");
 
             //On cree la chaine de donnee a passer
-            String urlParameters  = "tel_etudiant="+etudiant.getTel_etudiant()+"&mdp_etudiant="+etudiant.getMdp_etudiant();
+            String urlParameters  = "nom_etudiant="+etudiant.getNom_etudiant()+"&prenom_etudiant="+etudiant.getPrenom_etudiant()+"&sexe_etudiant="+etudiant.getSexe_etudiant()+"&cp_etudiant="+etudiant.getCp()+"&ville_etudiant="+etudiant.getVille()+"&description="+etudiant.getDescription_etudiant()+"&datenaiss="+etudiant.getDatenaiss();
             Log.i("param", urlParameters);
-
 
             //on encode
             byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8); //on decoupe en octets avec le charset UTf8
@@ -201,7 +197,6 @@ public class ModifProfil extends Activity{
 
             //On envoie les donnees
             try( DataOutputStream wr = new DataOutputStream( conn.getOutputStream())) {
-                Log.i("del", "dejgl");
                 wr.write( postData );
             } catch (Exception e) {
                 Log.i("mais pk ?", "je sais pas vraiment");
