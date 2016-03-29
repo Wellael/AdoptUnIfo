@@ -33,6 +33,7 @@ public class ModifProfil extends Activity{
     private static final String FLAG_SUCCESS = "success";
     private static final String FLAG_MESSAGE = "message";
     private static final String LOGIN_URL = "http://prj001.vldi.fr/modifprofil.php";
+    private static int ori;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,8 @@ public class ModifProfil extends Activity{
         final EditText tel=(EditText) findViewById(R.id.tel);
         final EditText mdp=(EditText) findViewById(R.id.mdp);
         final EditText description=(EditText) findViewById(R.id.description);
+        final EditText cp = (EditText) findViewById(R.id.cp);
+        final EditText ville = (EditText) findViewById(R.id.ville);
 
         final RadioGroup grpSex=(RadioGroup) findViewById(R.id.grpSex);
         final RadioGroup grpInter=(RadioGroup) findViewById(R.id.grpInter);
@@ -70,25 +73,25 @@ public class ModifProfil extends Activity{
             @Override
             public void onClick(View v) {
                 String sexe;
-                String ori;
+
 
                 int idsex = grpSex.getCheckedRadioButtonId();
                 if (idsex == R.id.homme){
-                    sexe = "Homme";
+                    sexe = "M";
                 }
                 else{
-                    sexe = "Femme";
+                    sexe = "F";
                 }
 
                 int idori = grpInter.getCheckedRadioButtonId();
                 if (idori == R.id.hommeO){
-                    ori = "Homme";
+                    ori = 1;
                 }
                 else if(idori == R.id.femmeO){
-                    ori = "Femme";
+                    ori = 2;
                 }
                 else{
-                    ori = "Les deux";
+                    ori = 3;
                 }
 
                 Etudiant etudiant = new Etudiant();
@@ -99,13 +102,24 @@ public class ModifProfil extends Activity{
                 etudiant.setDatenaiss(dateNais.getText().toString());
                 etudiant.setDescription_etudiant(description.getText().toString());
                 etudiant.setSexe_etudiant(sexe);
+                etudiant.setCp(cp.getText().toString());
+                etudiant.setVille(ville.getText().toString());
+
+
 
                 WebService webService = new WebService();
                 //On appel l'AsyncTask
                 webService.execute(etudiant);//Appel de l'asyntask
 
-                Intent goToResult = new Intent(getApplicationContext(), MonProfil.class);
-                startActivity(goToResult);
+                Intent intent_infos = new Intent(getApplicationContext(), MonProfil.class);
+                intent_infos.putExtra("nom", nom.getText().toString());
+                intent_infos.putExtra("prenom", prenom.getText().toString());
+                intent_infos.putExtra("sexe", sexe);
+                intent_infos.putExtra("cp", cp.getText().toString());
+                intent_infos.putExtra("ville", ville.getText().toString());
+                intent_infos.putExtra("date", dateNais.getText().toString());
+                intent_infos.putExtra("tel", tel.getText().toString());
+                startActivity(intent_infos);
             }
         });
     }
@@ -187,7 +201,7 @@ public class ModifProfil extends Activity{
             conn.setRequestMethod("POST");
 
             //On cree la chaine de donnee a passer
-            String urlParameters  = "nom_etudiant="+etudiant.getNom_etudiant()+"&prenom_etudiant="+etudiant.getPrenom_etudiant()+"&sexe_etudiant="+etudiant.getSexe_etudiant()+"&cp_etudiant="+etudiant.getCp()+"&ville_etudiant="+etudiant.getVille()+"&description="+etudiant.getDescription_etudiant()+"&datenaiss="+etudiant.getDatenaiss();
+            String urlParameters  = "nom_etudiant="+etudiant.getNom_etudiant()+"&prenom_etudiant="+etudiant.getPrenom_etudiant()+"&sexe_etudiant="+etudiant.getSexe_etudiant()+"&cp_etudiant="+etudiant.getCp()+"&ville_etudiant="+etudiant.getVille()+"&description="+etudiant.getDescription_etudiant()+"&datenaiss="+etudiant.getDatenaiss()+"&tel_etudiant="+etudiant.getTel_etudiant()+"&mdp_etudiant="+etudiant.getMdp_etudiant()+"&id_orientation"+ori;
             Log.i("param", urlParameters);
 
             //on encode
@@ -218,7 +232,6 @@ public class ModifProfil extends Activity{
 
             return jsonResponse;
         } catch (Exception e) {
-            Log.i("alors", "et mer...");
             e.printStackTrace();
 
             return jsonResponse;
