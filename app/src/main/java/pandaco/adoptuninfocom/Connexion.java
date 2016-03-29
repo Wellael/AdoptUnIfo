@@ -47,7 +47,7 @@ public class Connexion extends Activity{
     private static final String FLAG_TEL_ETUDIANT = "tel_etudiant";
     private static final String FLAG_NOM_DEPARTEMENT = "nom_departement";
     private static final String FLAG_DATE_PROMOTION = "datepromotion";
-    private static final String LOGIN_URL = "http://prj001.vldi.fr/"; // ajustez selon votre adresse de serveur
+    private static final String LOGIN_URL = "http://prj001.vldi.fr/index.php"; // ajustez selon votre adresse de serveur
     private static Boolean JeSuisLog = false;
 
 
@@ -71,11 +71,8 @@ public class Connexion extends Activity{
                 } else {
 
                     Etudiant etudiant = new Etudiant();
-                    Log.i("tel", tel.getText().toString());
                     etudiant.setTel_etudiant(tel.getText().toString());
-                    Log.i("mdp", mdp.getText().toString());
                     etudiant.setMdp_etudiant(mdp.getText().toString());
-                    Log.i("etudiant", "kfldsfke");
 
                     //On instancie on objet de type WebService
                     WebService webService = new WebService();
