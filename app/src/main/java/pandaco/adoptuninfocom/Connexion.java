@@ -44,6 +44,9 @@ public class Connexion extends Activity{
     private static final String FLAG_CP_ETUDIANT = "cp";
     private static final String FLAG_VILLE_ETUDIANT = "ville";
     private static final String FLAG_DATENAISS_ETUDIANT = "datenaiss";
+    private static final String FLAG_TEL_ETUDIANT = "tel_etudiant";
+    private static final String FLAG_NOM_DEPARTEMENT = "nom_departement";
+    private static final String FLAG_DATE_PROMOTION = "datepromotion";
     private static final String LOGIN_URL = "http://prj001.vldi.fr/"; // ajustez selon votre adresse de serveur
     private static Boolean JeSuisLog = false;
 
@@ -174,14 +177,21 @@ public class Connexion extends Activity{
                     String cpEtudiant = demiJson.getString(FLAG_CP_ETUDIANT);
                     String villeEtudiant = demiJson.getString(FLAG_VILLE_ETUDIANT);
                     String datenaissEtudiant = demiJson.getString(FLAG_DATENAISS_ETUDIANT);
-                    List<String> infos = new ArrayList<String>();
-                    infos.add(nomEtudiant);
-                    infos.add(prenomEtudiant);
-                    infos.add(sexeEtudiant);
-                    infos.add(cpEtudiant);
-                    infos.add(villeEtudiant);
-                    infos.add(datenaissEtudiant);
-                    //Session.setInfos(infos);
+                    String telEtudiant = demiJson.getString(FLAG_TEL_ETUDIANT);
+                    String nomDepartement = demiJson.getString(FLAG_NOM_DEPARTEMENT);
+                    String datePromotion = demiJson.getString(FLAG_DATE_PROMOTION);
+
+                    Intent intent_infos = new Intent(getApplicationContext(), MonProfil.class);
+                    intent_infos.putExtra("nom", nomEtudiant);
+                    intent_infos.putExtra("prenom", prenomEtudiant);
+                    intent_infos.putExtra("sexe", sexeEtudiant);
+                    intent_infos.putExtra("cp",cpEtudiant);
+                    intent_infos.putExtra("ville", villeEtudiant);
+                    intent_infos.putExtra("date", datenaissEtudiant);
+                    intent_infos.putExtra("tel", telEtudiant);
+                    intent_infos.putExtra("depart", nomDepartement);
+                    intent_infos.putExtra("datepromo", datePromotion);
+                    startActivity(intent_infos);
                 } else {
                     Toast.makeText(getApplicationContext(), "Try again.",
                             Toast.LENGTH_SHORT).show();

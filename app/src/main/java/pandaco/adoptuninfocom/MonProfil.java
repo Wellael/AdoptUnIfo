@@ -26,17 +26,32 @@ public class MonProfil extends Activity {
         final TextView sexe=(TextView) findViewById(R.id.sexe);
         final TextView dateNais=(TextView) findViewById(R.id.dateNais);
         final TextView tel=(TextView) findViewById(R.id.tel);
-        final TextView adresse1=(TextView) findViewById(R.id.adresse1);
-        final TextView adresse2=(TextView) findViewById(R.id.adresse2);
-        final TextView adresse3=(TextView) findViewById(R.id.adresse3);
+        final TextView cp=(TextView) findViewById(R.id.cp);
+        final TextView ville=(TextView) findViewById(R.id.ville);
         final TextView depart=(TextView) findViewById(R.id.depart);
-        final TextView anne=(TextView) findViewById(R.id.anne);
+        final TextView promotion=(TextView) findViewById(R.id.promotion);
 
-        List<String> infos = new ArrayList<String>();
-        infos=Session.getInfos();
+        Intent intent_infos = getIntent();
+        String nomEtudiant = intent_infos.getStringExtra("nom");
+        String prenomEtudiant = intent_infos.getStringExtra("prenom");
+        String sexeEtudiant = intent_infos.getStringExtra("sexe");
+        String cpEtudiant = intent_infos.getStringExtra("cp");
+        String villeEtudiant = intent_infos.getStringExtra("ville");
+        String datenaissEtudiant = intent_infos.getStringExtra("date");
+        String telEtudiant = intent_infos.getStringExtra("tel");
+        String datePromotion = intent_infos.getStringExtra("datepromo");
+        String nomDepartement = intent_infos.getStringExtra("depart");
 
-        nom.setText(String.valueOf(infos.get(0)));
 
+        nom.setText(nomEtudiant);
+        prenom.setText(prenomEtudiant);
+        sexe.setText(sexeEtudiant);
+        tel.setText(telEtudiant);
+        cp.setText(cpEtudiant);
+        ville.setText(villeEtudiant);
+        dateNais.setText(datenaissEtudiant);
+        depart.setText(nomDepartement);
+        promotion.setText(datePromotion);
 
 
         Button recherche = (Button) findViewById(R.id.recherche);

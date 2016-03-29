@@ -32,9 +32,28 @@ public class ModifProfil extends Activity{
         final Button hommeO=(Button) findViewById(R.id.hommeO);
         final Button femmeO=(Button) findViewById(R.id.femmeO);
         final Button deuxO=(Button) findViewById(R.id.deuxO);
+        String sexe;
+        String ori;
 
-        final ExpandableListView listDep=(ExpandableListView) findViewById(R.id.listDep);
-        final ExpandableListView listAnne=(ExpandableListView) findViewById(R.id.listAnne);
+        int idsex = grpSex.getCheckedRadioButtonId();
+        if (idsex == R.id.homme){
+             sexe = "Homme";
+        }
+        else{
+             sexe = "Femme";
+        }
+
+        int idori = grpInter.getCheckedRadioButtonId();
+        if (idori == R.id.hommeO){
+            ori = "Homme";
+        }
+        else if(idori == R.id.femmeO){
+            ori = "Femme";
+        }
+        else{
+            ori = "Les deux";
+        }
+
 
         Button valider = (Button) findViewById(R.id.valider);
         Button retour = (Button) findViewById(R.id.retour);
@@ -42,7 +61,7 @@ public class ModifProfil extends Activity{
         retour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent goToResult = new Intent(getApplicationContext(), MainActivity.class);
+                Intent goToResult = new Intent(getApplicationContext(), MonProfil.class);
                 startActivity(goToResult);
             }
         });
