@@ -169,13 +169,13 @@ public class ModifProfil extends Activity{
 
 
                 if (loginOK != 0) {
-                    Toast.makeText(getApplicationContext(), "Connecte",
+                    Toast.makeText(getApplicationContext(), "Profil modifié",
                             Toast.LENGTH_SHORT).show();
                     JSONObject demiJson = responseJson.getJSONObject("data");
 
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "Try again.",
+                    Toast.makeText(getApplicationContext(), "Error.",
                             Toast.LENGTH_SHORT).show();
                 }
             } catch (JSONException e) {
@@ -201,13 +201,12 @@ public class ModifProfil extends Activity{
             conn.setRequestMethod("POST");
 
             //On cree la chaine de donnee a passer
-            String urlParameters  = "nom_etudiant="+etudiant.getNom_etudiant()+"&prenom_etudiant="+etudiant.getPrenom_etudiant()+"&sexe_etudiant="+etudiant.getSexe_etudiant()+"&cp_etudiant="+etudiant.getCp()+"&ville_etudiant="+etudiant.getVille()+"&description="+etudiant.getDescription_etudiant()+"&datenaiss="+etudiant.getDatenaiss()+"&tel_etudiant="+etudiant.getTel_etudiant()+"&mdp_etudiant="+etudiant.getMdp_etudiant()+"&id_orientation"+ori;
+            String urlParameters  = "nom_etudiant="+etudiant.getNom_etudiant()+"&prenom_etudiant="+etudiant.getPrenom_etudiant()+"&sexe_etudiant="+etudiant.getSexe_etudiant()+"&cp="+etudiant.getCp()+"&ville="+etudiant.getVille()+"&description_etudiant="+etudiant.getDescription_etudiant()+"&datenaiss="+etudiant.getDatenaiss()+"&tel_etudiant="+etudiant.getTel_etudiant()+"&mdp_etudiant="+etudiant.getMdp_etudiant()+"&id_orientation"+ori;
             Log.i("param", urlParameters);
 
             //on encode
             byte[] postData = urlParameters.getBytes(StandardCharsets.UTF_8); //on decoupe en octets avec le charset UTf8
             conn.setRequestProperty("Content-Length", "" + postData.length);
-            Log.i("azea", postData.toString());
 
             //On envoie les donnees
             try( DataOutputStream wr = new DataOutputStream( conn.getOutputStream())) {
