@@ -4,17 +4,24 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Inscription extends Activity{
 
     private boolean erreur = false;
+
+    Spinner listDep;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +32,9 @@ public class Inscription extends Activity{
         final EditText dateNais=(EditText) findViewById(R.id.dateNais);
         final EditText tel=(EditText) findViewById(R.id.tel);
         final EditText mdp=(EditText) findViewById(R.id.mdp);
+        final EditText description=(EditText) findViewById(R.id.description);
+        final EditText cp = (EditText) findViewById(R.id.cp);
+        final EditText ville = (EditText) findViewById(R.id.ville);
 
         final RadioGroup grpSex=(RadioGroup) findViewById(R.id.grpSex);
         final RadioGroup grpInter=(RadioGroup) findViewById(R.id.grpInter);
@@ -37,6 +47,35 @@ public class Inscription extends Activity{
 
         Button valider=(Button) findViewById(R.id.valider);
         Button retour=(Button) findViewById(R.id.retour);
+
+
+        Spinner listDep = (Spinner) findViewById(R.id.listDep);
+        //Création d'une liste d'élément à mettre dans le Spinner(pour l'exemple)
+        List departements = new ArrayList();
+        departements.add("1- GEA");
+        departements.add("2- GEII");
+        departements.add("3- TC");
+        departements.add("4- R&T");
+        departements.add("5- QLIO");
+        departements.add("6- INFO");
+        departements.add("7- MPH");
+        departements.add("8- GMP");
+
+		/*Le Spinner a besoin d'un adapter pour sa presentation alors on lui passe le context(this) et
+                un fichier de presentation par défaut( android.R.layout.simple_spinner_item)
+		Avec la liste des elements (exemple) */
+        ArrayAdapter adapter = new ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item,
+                departements
+        );
+
+
+        /* On definit une présentation du spinner quand il est déroulé (android.R.layout.simple_spinner_dropdown_item) */
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //Enfin on passe l'adapter au Spinner
+        listDep.setAdapter(adapter);
+
 
         retour.setOnClickListener(new View.OnClickListener() {
             @Override

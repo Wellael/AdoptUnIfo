@@ -180,6 +180,88 @@
         </LinearLayout>
 
         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/descr"
+                android:id="@+id/lblDescription" />
+            <EditText
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:minLines="3"
+                android:gravity="top|left"
+                android:maxLines="6"
+                android:scrollbars="vertical"
+                android:layout_marginLeft="70dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/description"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Code Postal :"
+                android:id="@+id/lblCp" />
+            <EditText
+                android:layout_marginLeft="66dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/cp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ville :"
+                android:id="@+id/lblVille" />
+            <EditText
+                android:layout_marginLeft="115dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/ville" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departement :"
+                android:id="@+id/lblDepartement" />
+
+
+            <Spinner
+                android:layout_marginLeft="60dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/listDep">
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
